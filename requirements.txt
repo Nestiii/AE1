@@ -10,3 +10,6 @@ matplotlib>=3.4
 # Si la compilación falla, probar: pip install --no-build-isolation eval7
 #   (requiere antes: pip install cython)
 eval7>=0.1.8
+
+# Solo necesario para REGENERAR el informe en PDF (scripts/build_report.py).
+reportlab>=4.0

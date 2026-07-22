@@ -102,8 +102,10 @@ su frecuencia y el rango de call (fijo) de la BB. Detalle completo en
 - [x] Script/notebook en Python que resuelve el problema con un GA
 - [x] Gráfico de convergencia (obligatorio) + diagrama de caja (opcional)
 - [x] Notebook reproducible en Google Colab
-- [ ] Documento `.pdf` (mínimo 3 carillas) con la URL de este repo — *pendiente*
-- [ ] Publicar el repositorio en GitHub y actualizar la URL en la notebook/PDF
+- [x] Documento `.pdf` (5 carillas) con la URL del repo → [`docs/AE1-pushfold-GA-informe.pdf`](docs/AE1-pushfold-GA-informe.pdf)
+- [x] Repositorio publicado en GitHub
+
+> El informe se regenera con `python scripts/build_report.py --author "Nombre Apellido"`.
 
 ## Trabajo futuro (extensión A2)
 
