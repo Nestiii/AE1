@@ -3,6 +3,11 @@
 **Algoritmos Evolutivos I (2026) — Maestría en Inteligencia Artificial, FIUBA**
 Desafío Práctico · Técnica: **Algoritmos Genéticos (GA)**
 
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Nestiii/AE1/blob/master/notebooks/ae1_pushfold_ga.ipynb)
+
+> Hacé clic en el botón **Open in Colab** y luego *Entorno de ejecución → Ejecutar todo*
+> para reproducir todos los resultados (clona el repo e instala las dependencias solo).
+>
 > La consigna original del trabajo está transcripta en [`CONSIGNA.md`](CONSIGNA.md).
 
 Este proyecto usa un **Algoritmo Genético** para encontrar la estrategia óptima de
