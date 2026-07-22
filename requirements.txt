@@ -1,0 +1,12 @@
+# Dependencias del proyecto (Python 3.9+)
+
+# Núcleo: cálculo numérico y gráficos. Suficiente para correr el GA y generar
+# todas las figuras a partir de la matriz de equity ya versionada (data/).
+numpy>=1.21
+matplotlib>=3.4
+
+# Solo necesario para REGENERAR la matriz de equity (scripts/precompute_equity.py).
+# Evaluador de manos de póker en C, muy rápido. En Colab: `pip install eval7`.
+# Si la compilación falla, probar: pip install --no-build-isolation eval7
+#   (requiere antes: pip install cython)
+eval7>=0.1.8

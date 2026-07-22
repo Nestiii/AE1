@@ -1,0 +1,34 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# ---- Entornos virtuales ----
+.venv/
+venv/
+env/
+ENV/
+
+# ---- Notebooks ----
+.ipynb_checkpoints/
+
+# ---- Artefactos generados ----
+# NOTA: la matriz de equity (data/equity_*.npy) SÍ se versiona a propósito, así el
+# GA y los gráficos corren en Colab solo con numpy/matplotlib, sin recompilar eval7.
+# Se regenera con scripts/precompute_equity.py si hiciera falta.
+
+# Figuras/resultados generados por los experimentos (se regeneran con scripts/run_ga.py)
+results/*.png
+results/*.pdf
+results/*.csv
+
+# ---- Sistema operativo / editores ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
