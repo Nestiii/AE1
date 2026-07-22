@@ -32,8 +32,8 @@ espacio enorme que resolvemos con una metaheurística.
 | ![convergencia](docs/img/convergencia.png) | ![boxplot](docs/img/boxplot.png) | ![rango](docs/img/rango.png) |
 
 El GA converge de forma estable al **óptimo analítico exacto** (0/169 manos de
-diferencia) y recupera un rango con sentido pokerístico: todos los pares, todos los
-ases, reyes *suited*, *broadways* y conectores. El diagrama de caja muestra cómo, al
+diferencia) y recupera un rango con sentido pokerístico: todos los pares, cualquier mano
+con un as o un rey, *broadways* y algunos conectores *suited*. El diagrama de caja muestra cómo, al
 aumentar el presupuesto de generaciones, la mediana sube hacia el óptimo y la
 dispersión entre corridas se reduce.
 

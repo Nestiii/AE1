@@ -315,9 +315,12 @@ def build_story(styles, author):
     story.append(P(
         "Finalmente, la Figura 3 presenta el cromosoma ganador como la clásica grilla "
         "13×13 de manos (verde = push, gris = fold). El rango obtenido tiene pleno sentido "
-        "pokerístico: se pushean todos los pares, todos los ases, los reyes <i>suited</i>, "
-        "las manos <i>broadway</i> y los conectores <i>suited</i>. No hay ninguna celda "
-        "marcada en rojo, es decir, no hay diferencias con el óptimo analítico.", S["Body"]))
+        "pokerístico: se pushean todos los pares, cualquier mano con un as o un rey (incluso "
+        "K2), las manos altas (<i>broadways</i>) y algunos conectores <i>suited</i>. Que "
+        "manos débiles como K2 entren se explica por el modelo de EV: con la BB foldeando "
+        "casi la mitad de las veces y la ciega chica ya posteada, empujar pierde menos que "
+        "rendirse. No hay ninguna celda marcada en rojo, es decir, no hay diferencias con "
+        "el óptimo analítico.", S["Body"]))
     story += figure(os.path.join(IMG, "rango.png"), S,
                     "Figura 3. Rango de push evolucionado (stack 10 BB). Verde = push, "
                     "gris = fold; borde rojo marcaría diferencias con el óptimo (ninguna).",
