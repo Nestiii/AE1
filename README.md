@@ -81,9 +81,9 @@ python scripts/precompute_equity.py --samples 25000
 
 ### Google Colab (reproducible)
 
-Abrí `notebooks/ae1_pushfold_ga.ipynb` en Colab, reemplazá `USUARIO` por tu usuario de
-GitHub en la celda de setup y ejecutá todo (`Entorno de ejecución → Ejecutar todas`).
-La notebook clona este repo, importa `src/pushfold/` y reproduce todas las figuras.
+Abrí `notebooks/ae1_pushfold_ga.ipynb` en Colab y ejecutá todo (`Entorno de ejecución →
+Ejecutar todas`). La notebook clona este repo, importa `src/pushfold/` y reproduce todas
+las figuras.
 
 ## Modelo (resumen)
 
