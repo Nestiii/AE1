@@ -274,7 +274,7 @@ def build_story(S):
                 "años en pulir.", S["Body"]))
     st += figure(os.path.join(IMG, "rango.png"), S,
                  "La estrategia óptima hallada por el algoritmo, en la clásica grilla "
-                 "13×13 del póker (verde = push, gris = fold).", width=9.8 * cm)
+                 "13×13 del póker (verde = push, gris = fold).", width=8.3 * cm)
 
     # Parte 5
     st.append(P("Parte 5 — Qué aprendimos (y qué falta)", S["H1"]))
@@ -295,26 +295,41 @@ def build_story(S):
     # Mapa mental
     st.append(P("Mapa mental para recordarlo", S["H1"]))
     st.append(code(
-        "        169 decisiones push/fold  =  una estrategia (el \"ADN\")\n"
-        "                     │\n"
-        "        80 estrategias al azar     =  la poblacion inicial\n"
-        "                     │\n"
-        "   ┌──────────────► repetir 120 veces ◄─────────────┐\n"
-        "   │                                                │\n"
-        "   │   1. seleccionar las mejores (fitness)         │\n"
-        "   │   2. cruzarlas  → estrategias hijas            │\n"
-        "   │   3. mutar un poco al azar                     │\n"
-        "   │   4. conservar las 2 mejores (elitismo)        │\n"
-        "   │                                                │\n"
-        "   └────────────────────► ↑ ───────────────────────┘\n"
-        "                     │\n"
-        "        la poblacion converge a la mejor jugada\n"
-        "                     │\n"
-        "        verificamos: coincide con la respuesta optima  ✓", S))
+        "   169 decisiones push/fold  →  una estrategia (el \"ADN\")\n"
+        "   80 estrategias al azar     →  la poblacion inicial\n"
+        "   ┌───────────► repetir 120 veces ◄───────────┐\n"
+        "   │   1. seleccionar las mejores (fitness)     │\n"
+        "   │   2. cruzarlas  → estrategias hijas        │\n"
+        "   │   3. mutar un poco al azar                 │\n"
+        "   │   4. conservar las 2 mejores (elitismo)    │\n"
+        "   └───────────────────► ↑ ────────────────────┘\n"
+        "   la poblacion converge  →  coincide con el optimo  ✓", S))
 
     st.append(Spacer(1, 4))
     st.append(P("Para el detalle técnico completo, ver el README, el informe en PDF y el "
                 "código comentado en src/pushfold/ del repositorio.", S["Body"]))
+
+    # --- Enlaces (al pie del documento) ---
+    st.append(Spacer(1, 4))
+    colab_url = ("https://colab.research.google.com/drive/"
+                 "1y-XuN03sDg1YcVJO2KtwqX7zpu5MHd1E?usp=sharing")
+    links = Table([
+        [P("<b>Repositorio (código fuente)</b>", S["Body"]),
+         P(f'<font name="DejaVuMono" size="9"><a href="{REPO_URL}" '
+           f'color="#12507a">{REPO_URL}</a></font>', S["Body"])],
+        [P("<b>Notebook reproducible (Colab)</b>", S["Body"]),
+         P(f'<font name="DejaVuMono" size="7.5"><a href="{colab_url}" '
+           f'color="#12507a">{colab_url}</a></font>', S["Body"])],
+    ], colWidths=[5 * cm, 10.5 * cm])
+    links.setStyle(TableStyle([
+        ("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#eef3f7")),
+        ("BOX", (0, 0), (-1, -1), 0.6, colors.HexColor("#12507a")),
+        ("INNERGRID", (0, 0), (-1, -1), 0.3, colors.HexColor("#c5d5e2")),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("TOPPADDING", (0, 0), (-1, -1), 5), ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+        ("LEFTPADDING", (0, 0), (-1, -1), 7), ("RIGHTPADDING", (0, 0), (-1, -1), 7),
+    ]))
+    st.append(links)
     return st
 
 

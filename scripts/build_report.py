@@ -366,8 +366,29 @@ def build_story(styles, author):
         "aproximar el <b>equilibrio de Nash</b> de push/fold; allí el problema deja de ser "
         "separable y el Algoritmo Genético cobra un rol más rico como buscador de "
         "equilibrios. El código completo, la notebook reproducible en Google Colab y las "
-        f"instrucciones están en el repositorio: <font name=\"DejaVuMono\">{REPO_URL}</font>.",
-        S["Body"]))
+        "instrucciones están en el repositorio enlazado más abajo.", S["Body"]))
+
+    # --- Enlaces (al pie del documento) ---
+    story.append(Spacer(1, 10))
+    colab_url = ("https://colab.research.google.com/drive/"
+                 "1y-XuN03sDg1YcVJO2KtwqX7zpu5MHd1E?usp=sharing")
+    links = Table([
+        [P("<b>Repositorio (código fuente)</b>", S["Body"]),
+         P(f'<font name="DejaVuMono" size="9"><a href="{REPO_URL}" '
+           f'color="#12507a">{REPO_URL}</a></font>', S["Body"])],
+        [P("<b>Notebook reproducible (Colab)</b>", S["Body"]),
+         P(f'<font name="DejaVuMono" size="7.5"><a href="{colab_url}" '
+           f'color="#12507a">{colab_url}</a></font>', S["Body"])],
+    ], colWidths=[5 * cm, 10.5 * cm])
+    links.setStyle(TableStyle([
+        ("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#eef3f7")),
+        ("BOX", (0, 0), (-1, -1), 0.6, colors.HexColor("#12507a")),
+        ("INNERGRID", (0, 0), (-1, -1), 0.3, colors.HexColor("#c5d5e2")),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("TOPPADDING", (0, 0), (-1, -1), 5), ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+        ("LEFTPADDING", (0, 0), (-1, -1), 7), ("RIGHTPADDING", (0, 0), (-1, -1), 7),
+    ]))
+    story.append(links)
 
     return story
 
